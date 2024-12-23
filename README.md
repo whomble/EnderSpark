@@ -1,2 +1,2 @@
 # WireEDM
-![image](https://github.com/user-attachments/assets/ae792cb2-0c87-48fe-ade9-1ce5a356d17f)
+![image](https://github.com/user-attachments/assets/fe1162ec-6423-45ec-9d0a-92f5aba33980)

@@ -15,6 +15,19 @@ It's actually pretty easy to make an arc for EDM, it won't be as powerfull as a 
 
 During EDM process, the arc is vaporazing the metal we want to cut and also the wire, so the wire need to be replaced constantly. The easyest and cheapset way to do that is to use the extruder from the ender 3D with a custom aluminium mount as well as the driver from the motherboard. I've tried to modify the firmware to controll it independently but I didn't knew how, so I've cutted the traces on the motheroard and solder some wires between the driver and the pico.
 
+![image](https://github.com/user-attachments/assets/fe1162ec-6423-45ec-9d0a-92f5aba33980)
+
+# Power managment 
+
+The power supply should be able to deliver at least 5A with a minium voltage of ~40V, 70-80V make cleaner cuts and are pretty standard in the industry so it's up to you. I personnally use a 48V SMPS, 50V is the limit to be considered safe if accidently touched in the EU but I will probably increase the voltage later.
+
+As soon as the arc is forming, the voltage decrease and the current increase, to protect the PSU, we need to limit the current with some power resistor, I have a 10ohm 100W resistor mounted on a waterblock to limit the current to 5A when the voltage is maximum.
+
+Last part is the capacitors, it helps deliver high current durring short amount of time. You can't use some standard electrolitic capacitor (belive me I tried) ceramic or polymer are a good option, they don't care being shorted be they need to be cool in order to function properly, you can use the same waterblock as for the resistor.
+
+![Voltage-and-current-waveforms-of-five-discharge-states-in-EDM](https://github.com/user-attachments/assets/fbb59400-5a70-46da-a894-3b3ba7c30c38)
+
+
 # Printed part list
 
 
@@ -53,4 +66,4 @@ A lots of tools are needed to work properly:
 
 # Conception
 
-![image](https://github.com/user-attachments/assets/fe1162ec-6423-45ec-9d0a-92f5aba33980)
+

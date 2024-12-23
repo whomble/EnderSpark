@@ -28,6 +28,11 @@ Last part is the capacitors, it helps deliver high current durring short amount 
 ![Voltage-and-current-waveforms-of-five-discharge-states-in-EDM](https://github.com/user-attachments/assets/fbb59400-5a70-46da-a894-3b3ba7c30c38)
 
 
+# Motion
+
+Wire edm is a slow process but the minimum speed achivable on an ender 3 is about 1mm/s, we need to be able to move bewteen 0.5-100mm/min in function of the thickness and metall. I've founded 1:51 reducer for around 15€ which can be mounted directly on a nema 17, a printed gearbox have too much backlash for this application so I've also designed a belt reducer of 1:64 which cost 4€ to build.
+
+
 # Printed part list
 
 

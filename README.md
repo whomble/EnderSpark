@@ -15,7 +15,8 @@ It's actually pretty easy to make an arc for EDM, it won't be as powerfull as a 
 
 During EDM process, the arc is vaporazing the metal we want to cut and also the wire, so the wire need to be replaced constantly. The easyest and cheapset way to do that is to use the extruder from the ender 3D with a custom aluminium mount as well as the driver from the motherboard. I've tried to modify the firmware to controll it independently but I didn't knew how, so I've cutted the traces on the motheroard and solder some wires between the driver and the pico.
 
-![image](https://github.com/user-attachments/assets/fe1162ec-6423-45ec-9d0a-92f5aba33980)
+![image](https://github.com/user-attachments/assets/f70182c3-5eb5-4c20-92ec-79943a7b8fd9)
+
 
 # Power managment 
 

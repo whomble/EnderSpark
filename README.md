@@ -29,7 +29,7 @@ The conversion from a 3D printer to a wire EDM can be done in 6 steps:
 # WARNiNG 
 The voltage is lower than the SELV (50V for AC 120V for DC) in DRY CONDITIONS, for WET CONDITION the SELV is (25V for AC and 60 for DC). In addition there is no GFCI to protect you so disconnect the PSU everytime you're planning to touch a metalic component and wear at leat nitrile gloves. If you don't know precisely what you are doing just skip this project.
 
-![1678867427_MR-paint-sprint-svg040122015-153202315332](https://github.com/user-attachments/assets/b17a9bc5-d4ed-4d56-95bb-522a2d57c858)
+<img src="![1678867427_MR-paint-sprint-svg040122015-153202315332](https://github.com/user-attachments/assets/b17a9bc5-d4ed-4d56-95bb-522a2d57c858)" width="800">
 
 
 # Mecanical parts

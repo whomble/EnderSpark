@@ -7,7 +7,49 @@ The machine's frame and motion system leverage the hardware of the Ender 3,  wit
 A Raspberry Pi Pico clone with a TC4428 and a powerful MOSFET are used to switch up to 10A at 50KHz
 
 This project includes guidance on generating toolpaths using a modified post processor from Fusion 360
-Depending on the availability of tools and salvaged materials, replication costs may vary slightly. This project took me a few hundreds of hours of developpment but you should be able to replicate in less than 30h.
+Depending on the availability of tools and salvaged materials, replication costs may vary slightly. This project took me a few hundreds of hours of developpment but you should be able to replicate in less than 50h.
+
+The conversion from a 3D printer to a wire EDM can be done in 6 steps:
+- Mechanical modifications
+- Wire feeder
+- Firmware update (marlin)
+- Ark generator
+- Water loop
+- Fusion 360 post processor
+
+| Part | Quantity | Cost |
+|- | - | - |
+| Arduino uno + CNC shield + DRV8825  | 1 | 15€ |
+| M3 * 10mm screws | 100 | 4€ |
+| M3 * 8mm screws| 50 | 2€ |
+| Linear rail MGN12H 300mm | 2 | 30€ |
+| Nema 17 gearbox 1:51| 2 | 30€ |
+| Total | a lot | 327€ |
+
+# Mecanical parts
+## Motion
+
+A big advantage of wire EDM compared to CNC milling is that the frame doesn't need to be very stiff, the hardware just need to support the wire feeder on the X axis and the water tank ~4kg on the Y axis. The Z axis isn't used during the cutting process but it's quite usefull to help changing the wire.
+
+I've had a linear rail (MGN12H) on X and Y axis, it can be bolted directly on X axis with T nuts and for the why axis you need to drill 4 holes in the buildplate support thats all.
+Wire EDM can be very slow depending on the thickness so one of the most important requirement is to be able to move slowly at a fixed rate. Regular stepper motors aren't able to do that, even with microstepping I made a fully printable belt reducer 1:64 but it need some improvements so I've just brought gearbox for nema 17 that can be directly connected to a 2GT pulley.
+
+## Wire feeder
+
+The wire feeder is the only complicated part which need to be custom made because it needs to fullfill a few requierments:
+- Stifness, during the cutting process the arcs can generate vibrations, to achieve a good surface finish the wire need to be very straight
+- Electrically insulated, even if the cutting is done under de-ionised water some electrolysis can occur which can reduce the power output. An insulated feeder also prevent from shorts if a metal part fall between the wire and the feeder
+- Grounded, at 20kHz the long wire is a big antenna which can emit a lot of parasites and damage electronics. Grounding as much part as possible is crucial to avoid that (and any risk for pacemaker users)
+- Tensionner mechanism, to avoid wire vibration the wire need to be adequatly tensionned.
+- Waste spool, wire edm consume the workpiece AND the wire, depending on the material it can use a lot of wire
+- Hard wire guide, I you have an old ender 3 you've probably experience filament grinding the extruder even if its plastic against plastic, the same thing can happend here with soft brass
+
+
+extruder are pulling the wire into the tensionner which will work harden the brass wire which will stay straight, then the wire pass trough a pair of nozzle, a rubis one for guidance and a plastic one for a small waterjet to remove chips. The wire is connected to the (-) terminal of the PSU by the brass wheel, but since the wire emit EMF like an antenna, I want to ground as much metal as I can, so the whole motor assembly is at the same potential as the wire, but the frame of the printer and the red part are grounded. The voltage arent high so a layer of epoxy or an anodization is enougth to insulate the two regions.
+
+![image](https://github.com/user-attachments/assets/74001182-e2b1-4f16-b15b-15b952c92897)
+
+
 
 # Electronics
 ## generator
@@ -30,44 +72,19 @@ Last part is the capacitors, it helps deliver high current durring short amount 
 ![Voltage-and-current-waveforms-of-five-discharge-states-in-EDM](https://github.com/user-attachments/assets/fbb59400-5a70-46da-a894-3b3ba7c30c38)
 
 
-# Mecanical parts
-
-## Motion
-Wire edm is a slow process but the minimum speed achivable on an ender 3 is about 1mm/s, we need to be able to move bewteen 0.5-100mm/min in function of the thickness and metall. I've founded 1:51 reducer for around 15€ which can be mounted directly on a nema 17, a printed gearbox have too much backlash for this application so I've also designed a belt reducer of 1:64 which cost 4€ to build.
-Both axis will be mounted on linear rails but the X axis is the most important, the wire need to vibrate as little as possible.
-
-## Wire feeder
-
-The extruder are pulling the wire into the tensionner which will work harden the brass wire which will stay straight, then the wire pass trough a pair of nozzle, a rubis one for guidance and a plastic one for a small waterjet to remove chips. The wire is connected to the (-) terminal of the PSU by the brass wheel, but since the wire emit EMF like an antenna, I want to ground as much metal as I can, so the whole motor assembly is at the same potential as the wire, but the frame of the printer and the red part are grounded. The voltage arent high so a layer of epoxy or an anodization is enougth to insulate the two regions.
-
-![image](https://github.com/user-attachments/assets/74001182-e2b1-4f16-b15b-15b952c92897)
-
-## Buildplate
-
-The EDM process must be done underwater for cooling and chip evacuation so the "builtplate" is a water tank, this one is in PVC but I will make it in acrylic in the future, I have printed and glued a grid at the bottom to attatch 2 flat brass block with tappered holes to fix the material I want to cut. The tank is held in place with magnets embeded in the orginal buildplate.
 
 # Toolpath generation
 
 # Water
-## Chip evacuation
+
+The EDM process must be done underwater for cooling and chip evacuation so the "builtplate" is a water tank, this one is in PVC but I will make it in acrylic in the future, I have printed and glued a grid at the bottom to attatch 2 flat brass block with tappered holes to fix the material I want to cut. The tank is held in place with magnets embeded in the orginal buildplate.
 ## Filtration
-## Cooling
 
 # Printed part list
 
 
-| Part | Quantity | Cost |
-|- | - | - |
-| Arduino uno + CNC shield + DRV8825  | 1 | 15€ |
-| M3 * 10mm screws | 100 | 4€ |
-| M3 * 8mm screws| 50 | 2€ |
-| Linear rail MGN12H 300mm | 4 | 60€ |
-| Linear rail MGN12H 150mm | 2 | 20€ |
-| Total | a lot | 327€ |
 
-In addition you need to find something to build the base on like aluminium extrusion, if you can found from second hand it can cost something like 40€ otherwise it's more like 80€. Even if it looks stiff 2020 extrusion from 3D printer can bend en vibrate with this type of machine so I'll recommand to use at least 30mm thick aluminuim extrusion.
-You will also need 8mm thick aluminium plate about 200 * 200mm again if you can found some from second hand it can be really cheap.
-T nut for aluminium extrusion could be added to the list (to fix the linear rails) but it's quite expensive and there isn't much load in this direction so i've 3D printed my own and add m3 inserts
+
 
 Some more commun supply are also needed like heat shrink tube, solder, wires (I use wires from old RJ45 cable it can handle something like 5A without a problem, its free nd easly accessible).
 

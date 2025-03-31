@@ -26,7 +26,8 @@ The conversion from a 3D printer to a wire EDM can be done in 6 steps:
 | Nema 17 gearbox 1:51| 2 | 30€ |
 | Total | a lot | 327€ |
 
-# WARNNG The voltage is lower than the SELV (50V for AC 120V for DC) in DRY CONDITIONS, for WET CONDITION the SELV is (25V for AC and 60 for DC). In addition there is no GFCI to protect you so disconnect the PSU everytime you're planning to touch a metalic component and wear at leat nitrile gloves. If you don't know precisely what you are doing just skip this project.
+# WARNNG 
+### The voltage is lower than the SELV (50V for AC 120V for DC) in DRY CONDITIONS, for WET CONDITION the SELV is (25V for AC and 60 for DC). In addition there is no GFCI to protect you so disconnect the PSU everytime you're planning to touch a metalic component and wear at leat nitrile gloves. If you don't know precisely what you are doing just skip this project.
 
 # Mecanical parts
 ## Motion

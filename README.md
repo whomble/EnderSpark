@@ -55,7 +55,8 @@ extruder are pulling the wire into the tensionner which will work harden the bra
 
 
 <img src="Photos/wirefeeder.png" width="400">
-<img src="Photos/V1.jpg" width="400"><img src="Photos/V2.jpg" width="400">
+
+<img src="Photos/V1.jpg" width="300"><img src="Photos/V2.jpg" width="300">
 
 
 

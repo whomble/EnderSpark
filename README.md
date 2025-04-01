@@ -53,7 +53,7 @@ The wire feeder is the only complicated part which need to be custom made becaus
 
 extruder are pulling the wire into the tensionner which will work harden the brass wire which will stay straight, then the wire pass trough a pair of nozzle, a rubis one for guidance and a plastic one for a small waterjet to remove chips. The wire is connected to the (-) terminal of the PSU by the brass wheel, but since the wire emit EMF like an antenna, I want to ground as much metal as I can, so the whole motor assembly is at the same potential as the wire, but the frame of the printer and the red part are grounded. The voltage arent high so a layer of epoxy or an anodization is enougth to insulate the two regions.
 
-<img src="Photos/V1.jpeg" width="400"><img src="Photos/V2.jpeg" width="400">
+<img src="Photos/V1.jpg" width="400"><img src="Photos/V2.jpg" width="400">
 
 
 ![image](https://github.com/user-attachments/assets/74001182-e2b1-4f16-b15b-15b952c92897)

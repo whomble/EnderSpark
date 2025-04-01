@@ -51,14 +51,27 @@ The wire feeder is the only complicated part which need to be custom made becaus
 - Hard wire guide, I you have an old ender 3 you've probably experience filament grinding the extruder even if its plastic against plastic, the same thing can happend here with soft brass
 
 
-extruder are pulling the wire into the tensionner which will work harden the brass wire which will stay straight, then the wire pass trough a pair of nozzle, a rubis one for guidance and a plastic one for a small waterjet to remove chips. The wire is connected to the (-) terminal of the PSU by the brass wheel, but since the wire emit EMF like an antenna, I want to ground as much metal as I can, so the whole motor assembly is at the same potential as the wire, but the frame of the printer and the red part are grounded. The voltage arent high so a layer of epoxy or an anodization is enougth to insulate the two regions.
 
 
 <img src="Photos/wirefeeder.png" width="400">
 
+This is the CAD of the first version, the extruder (nema 17 + a brass cylinder) is pulling the wire all the way from the tensionner. 
+The tensionner conssit of two all bearing pressing into each other like a 3D printer extruder, the sping can b adjust to block more the wire and provide more tension.
+Then, the wire need to be guided very precisely, for the upper guide I use a off the shelf rubis nozzle with a plastic nozzle around it for watercooling. The lower guide is a ceramic ball bearing with a PLA spacer and a .4mm brass nozzle to push the wire against the spacer. The two other ball bearings (ceramic for the lower one and steel with plastic cover for the upper one) just guie the wire to the extruder.
+
+The ball bearings needs to be in ceramic for three reason:
+1. Corosion
+2. No lubricant can desovle in water
+3. High hardness
+
+
+The wire is connected to the (-) terminal of the PSU by the brass wheel, but since the wire emit EMF like an antenna, I want to ground as much metal as I can, so the whole motor assembly is at the same potential as the wire, but the frame of the printer and the red part are grounded. The voltage arent high so a layer of epoxy or an anodization is enougth to insulate the two regions.
+
 <img src="Photos/V1.jpg" width="300"><img src="Photos/V2.jpg" width="300">
 
+The first version on the left use a lots of printed parts, it works but the tensionner some part can flex and reduce the wire tension/straightness so I made a second version in 5mm thick alluminium plate with 10mm thick tensionners.
 
+All the parts are availlable in .sldprt and .step
 
 
 # Electronics

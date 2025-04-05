@@ -77,7 +77,7 @@ All the parts are availlable in .sldprt and .step
 
 Wire edm as you can guess consume wire, so I need a simple way to manage the waste wire. My solution is to have the new spool of wireconnected to the waste spool with magnet so the second one can be drived by the first one. Since the first spool will get smaller and smaller and the second bigger and bigger, the first one will have to turn way fater to maintain a tension. With this configurtion, the first spool has a way smaller inner diameter which made it spin fzster at any moment. The magnets act like a clutch to maintain constant load at variable speeds.
 
-<img src="Photos/spool.jpg" width="300">
+<img src="Photos/spool.JPG" width="300">
 
 
 # Electronics

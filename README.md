@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e55e5ed2-0638-4426-924e-b232eecb24c2)# WireEDM
+# WireEDM
 
 Wire EDM uses electrical discharges to cut any conductive materials (brass, steel, aluminium even tungsten carbide) with no mechanical forces, enabling high precision, deep cuts, and machining of hard or delicate materials without deformation. 
 This project demonstrates how to build a DIY wire EDM machine using salvaged components from an old 3D printer and other affordable parts, keeping the total cost around 150€ + the ender 3 and less than 30h of work.
@@ -16,6 +16,8 @@ The conversion from a 3D printer to a wire EDM can be done in 6 steps:
 - Ark generator
 - Water loop
 - Fusion 360 post processor
+
+The full part list with some products link is in the #parts folder
 
 | Part | Quantity | Cost |
 |- | - | - |

@@ -53,7 +53,7 @@ The wire feeder is the only complicated part which need to be custom made becaus
 
 
 
-<img src="Photos/wirefeeder.png" width="400">
+<img src="Photos/CAD.png" width="400">
 
 This is the CAD of the first version, the extruder (nema 17 + a brass cylinder) is pulling the wire all the way from the tensionner. 
 The tensionner conssit of two all bearing pressing into each other like a 3D printer extruder, the sping can b adjust to block more the wire and provide more tension.

@@ -1,4 +1,4 @@
-# WireEDM
+![image](https://github.com/user-attachments/assets/e55e5ed2-0638-4426-924e-b232eecb24c2)# WireEDM
 
 Wire EDM uses electrical discharges to cut any conductive materials (brass, steel, aluminium even tungsten carbide) with no mechanical forces, enabling high precision, deep cuts, and machining of hard or delicate materials without deformation. 
 This project demonstrates how to build a DIY wire EDM machine using salvaged components from an old 3D printer and other affordable parts, keeping the total cost around 150€ + the ender 3 and less than 30h of work.
@@ -19,17 +19,44 @@ The conversion from a 3D printer to a wire EDM can be done in 6 steps:
 
 | Part | Quantity | Cost |
 |- | - | - |
-| Arduino uno + CNC shield + DRV8825  | 1 | 15€ |
-| M3 * 10mm screws | 100 | 4€ |
-| M3 * 8mm screws| 50 | 2€ |
+| Raspberry pi pico  | 1 | 15€ |
 | Linear rail MGN12H 300mm | 2 | 30€ |
-| Nema 17 gearbox 1:51| 2 | 30€ |
+| M3*8 screws | 30 | 30€ |
+| M3 T nuts| 1 | 30€ |
+| M5*16 screws | 8 | 30€ |
+| M6*12 screws | 2 | 30€ |
+| M4*12 screws | 5 | 30€ |
+| Nema 17 gearbox 1:51 | 2 | 30€ |
+| 24V membrane pump | 1 | 30€ |
+| Filter cardridge | 2 | 30€ |
+| Filter holder| 2 | 30€ |
+| 6mm pipes | 2 | 30€ |
+| Push pull connector | 8 | 30€ |
+| Waterblock | 2 | 30€ |
+| TC4428 | 2 | 30€ |
+| IRF135B203 | 2 | 30€ |
+| 4.7uF polymer capacitor | 2 | 30€ |
+| Buck converter | 2 | 30€ |
+| Acrylic sheet (3*235*635mm) | 1 | 30€ |
+| Oled screen | 1 | 30€ |
+| L7812CV| 1 | 30€ |
+| JST connectors | 1 | 30€ |
+| Banana connectors | 1 | 30€ |
+| Wire diodes resistor | 1 | 30€ |
+| Aluminium parts | 1 | 30€ |
+| Brass wheel | 1 | 30€ |
+| Ceramic bearings | 1 | 30€ |
+| Bearings | 1 | 30€ |
+| PLA ~200g | 1 | 30€ |
 | Total | a lot | 327€ |
 
-# WARNiNG 
+# WARNiNGs 
 The voltage is lower than the SELV (50V for AC 120V for DC) in DRY CONDITIONS, for WET CONDITION the SELV is (25V for AC and 60 for DC). In addition there is no GFCI to protect you so disconnect the PSU everytime you're planning to touch a metalic component and wear at leat nitrile gloves. If you don't know precisely what you are doing just skip this project.
 
 <img src="Photos/electicity.jpeg" width="400">
+
+
+Copper is consiered as a heavy metal, the best way to deal with the dirty water is to let it sit for a while in a ventilated area to evaporate all the water, after that it's jsut metal powder and can be disposed in the local recycling center.
 
 
 # Mecanical parts
@@ -100,15 +127,21 @@ Last part is the capacitors, it helps deliver high current durring short amount 
 These 3 main components are connected to a waterblock for cooling, in my experience it's a bit overkilled and air cooling will be enougth in the future but I need to circulate the water anyway so...
 
 
-
-# Toolpath generation
-
 # Water
 
-The EDM process must be done underwater for cooling and chip evacuation so the "builtplate" is a water tank, this one is in PVC but I will make it in acrylic in the future, I have printed and glued a grid at the bottom to attatch 2 flat brass block with tappered holes to fix the material I want to cut. The tank is held in place with magnets embeded in the orginal buildplate.
-## Filtration
+The EDM process must be done under a dielectric fluid, it can be ethanol, oil or kerosene but the easyest solution is obviously deionised water. Water is also used for cooling (the electrical components and the workpiece) and chip evacuation. The "builtplate" is a water tank made out of acrily sheets welded with aceton and a bit of silicone for etancheity. I've also add a steel shit so I can quickly remove it from my magnetic buildplate.
 
-# Printed part list
+EDM generate a ton of small metalic particles which needs to be filter during the cutting, The best pump I've found is a membrane pump which can provide high pressure (necessary for good filtration) and is quite silent when underpowered, it's design for 24V and I power it between 5-7V depending on the material. The filter is a standard polyester coton filter <0.1um in a cardrige in the future I'll probably try washables filters like ceramic or stainless steel. I use push pull and 6mm tubes for all my connection except for the nozzle its a 4mm.
+
+After each cuts I put the deionised water in it's original tank for decantation, and separate the "pure" water from the dirty one a few days later.
+
+Copper is consiered as a heavy metal, the best way to deal with the dirty water is to let it sit for a while in a ventilated area to evaporate all the water, after that it's jsut metal powder and can be disposed in the local recycling center.
+
+
+# Firmware modifications
+
+
+# Toolpath generation
 
 
 
@@ -133,7 +166,5 @@ A lots of tools are needed to work properly:
 - 3D printer
 - deburr tool
 
-
-# Conception
 
 

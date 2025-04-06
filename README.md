@@ -17,7 +17,7 @@ The conversion from a 3D printer to a wire EDM can be done in 6 steps:
 - Water loop
 - Fusion 360 post processor
 
-The full part list with some product links is in the [#parts folder](Parts/parts%20list.xslx)
+The full part list with some product links is in the [#parts folder](Parts/)
 
 
 # WARNiNGs 

@@ -116,11 +116,12 @@ Copper is consiered as a heavy metal, the best way to deal with the dirty water 
 The two easiest ways to generate a gcode is with a slicer or with a cam plugin. I've tried kirimoto which have a wire edm mode but there's very little features and you can't control the extruder. I've also tried cura, the limitation is that you can't set a very small speed, I even tried modifiyng the software but I coulnd'nt find a solution, maybe with orca slicer?
 
 In my opinion the easyest solution is to use the CAM part of fusion 360 with the laser/waterjet mod. 
-<img src="Photos/Capture.JPG" width="300">
+
+<img src="Photos/Capture.JPG" width="600">
 
 It's easy to setup a waterjet tool with 0.3mm stream and you can add a very long lead in to enter the workpiece from anywhere. You don't have to worry about feeds and speeds here, you just need to set all the hight to zero to avoid Z movements, and set up the appropriate thickness.
 
-<img src="Photos/Clead_in.jpg" width="300"><img src="Photos/postprocess.jpg" width="300">
+<img src="Photos/lead_in.jpg" width="300"><img src="Photos/postprocess.jpg" width="300">
 
 Then you need to select the wire edm post processor, I modified the wazer post processor to match my needs, I will not detail it here, the file is in this folder, you just have to paste it in the appropriate location.
 

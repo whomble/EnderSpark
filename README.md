@@ -138,6 +138,9 @@ In the future I will try molybdenum wire which is just a bit more expensive but 
 
 
 
+
+
+
 Some more commun supply are also needed like heat shrink tube, solder, wires (I use wires from old RJ45 cable it can handle something like 5A without a problem, its free nd easly accessible).
 
 A lots of tools are needed to work properly:

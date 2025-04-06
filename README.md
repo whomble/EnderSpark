@@ -64,7 +64,7 @@ The ball bearings needs to be in ceramic for three reason:
 
 The wire is connected to the (-) terminal of the PSU by the brass wheel and in the future a tungsten carbide contact block, but since the wire emit EMF like an antenna, I want to ground as much metal as I can, so the whole motor assembly is at the same potential as the wire, but the frame of the printer and the red part are grounded. The voltage arent high so a layer of epoxy or an anodization is enougth to insulate the two regions.
 
-<img src="Photos/V1.jpg" hight="100"><img src="Photos/V2.jpg" hight="100">
+<img src="Photos/V1.jpg" high="100"><img src="Photos/V2.jpg" high="100">
 
 The first version on the left use a lots of printed parts, it works but the tensionner some part can flex and reduce the wire tension/straightness so I made a second version in 5mm thick alluminium plate with 10mm thick tensionners.
 

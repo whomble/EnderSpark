@@ -113,6 +113,26 @@ Copper is consiered as a heavy metal, the best way to deal with the dirty water 
 
 # Toolpath generation
 
+The two easiest ways to generate a gcode is with a slicer or with a cam plugin. I've tried kirimoto which have a wire edm mode but there's very little features and you can't control the extruder. I've also tried cura, the limitation is that you can't set a very small speed, I even tried modifiyng the software but I coulnd'nt find a solution, maybe with orca slicer?
+
+In my opinion the easyest solution is to use the CAM part of fusion 360 with the laser/waterjet mod. 
+<img src="Photos/Capture.JPG" width="300">
+
+It's easy to setup a waterjet tool with 0.3mm stream and you can add a very long lead in to enter the workpiece from anywhere. You don't have to worry about feeds and speeds here, you just need to set all the hight to zero to avoid Z movements, and set up the appropriate thickness.
+
+<img src="Photos/Clead_in.jpg" width="300"><img src="Photos/postprocess.jpg" width="300">
+
+Then you need to select the wire edm post processor, I modified the wazer post processor to match my needs, I will not detail it here, the file is in this folder, you just have to paste it in the appropriate location.
+
+I have a very small database for differents materials, so if the thickness is right, just selec the material and it should be good to go. It's an ongoing project soyou will probably have sligly differents settings than me, I'll recommand you to do a speedtest for the material you're planing to cut and modify the database:
+
+<img src="Photos/database.jpg" width="300">
+
+surfacespeed is the speed in mm²/min, which correspond to the linear speed for a defined thickness ex: 3mm/min for 10mm thick aluminium is 30mm²/min.
+wirespeedpermm is the wire consumed per mm² with the previous example of 30mm²/min and 25mm it will consume 750mm of wire to cut this amount of material in 1min.
+
+A cheap 100m of 0.2mm joaillery brass wire (2€) will last for more than two hours ~0.02€/m, a more expensive 5kg of edm 0.25mm brass wire (110€) is almost 12km so ~0.01€/m and 250h of use.
+In the future I will try molybdenum wire which is just a bit more expensive but it can be used several times but I need to design a back and forth drive.
 
 
 

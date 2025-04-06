@@ -64,7 +64,7 @@ The ball bearings needs to be in ceramic for three reason:
 
 The wire is connected to the (-) terminal of the PSU by the brass wheel and in the future a tungsten carbide contact block, but since the wire emit EMF like an antenna, I want to ground as much metal as I can, so the whole motor assembly is at the same potential as the wire, but the frame of the printer and the red part are grounded. The voltage arent high so a layer of epoxy or an anodization is enougth to insulate the two regions.
 
-<img src="Photos/V1.jpg" high="100"><img src="Photos/V2.jpg" high="100">
+<img src="Photos/V1.jpg" height="300"><img src="Photos/V2.jpg" height="300">
 
 The first version on the left use a lots of printed parts, it works but the tensionner some part can flex and reduce the wire tension/straightness so I made a second version in 5mm thick alluminium plate with 10mm thick tensionners.
 
@@ -121,7 +121,7 @@ In my opinion the easyest solution is to use the CAM part of fusion 360 with the
 
 It's easy to setup a waterjet tool with 0.3mm stream and you can add a very long lead in to enter the workpiece from anywhere. You don't have to worry about feeds and speeds here, you just need to set all the hight to zero to avoid Z movements, and set up the appropriate thickness.
 
-<img src="Photos/lead_in.jpg" hight="100"><img src="Photos/postprocess.jpg" hight="100">
+<img src="Photos/lead_in.jpg" height="100"><img src="Photos/postprocess.jpg" height="100">
 
 Then you need to select the wire edm post processor, I modified the wazer post processor to match my needs, I will not detail it here, the file is in this folder, you just have to paste it in the appropriate location.
 

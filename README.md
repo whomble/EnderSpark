@@ -70,6 +70,16 @@ The first version on the left use a lots of printed parts, it works but the tens
 
 All the parts are availlable in .sldprt and .step
 
+### Manufcaturing
+
+Both the red and orange parts are 5mm thick aluminium cutted with my homemade CNC with a 3.175mm single flute endmill, the geometry is a bit complex and can be improve but if you want to make it there is a catch. The two parts are electrically insulated and need to be very straight, there is two options for insulating metalic coating. 
+- Anodisation of aluminium + galvanic varnish, it requier sulfuric acid and other chemicals and it's not that easy to make a thick and strong coating
+- Powder coating, there's a few hobbist projects but it involve fine powder which isn't better than sulfuric acid.
+
+Both can be DIY or manufacturer by a chinese company like pcbway or whatever, in the case of powder coating, the frame can be made out of steel (not stainless) wich will give way more stifness. 
+
+The two other aluminium parts doesn't need any coating same for the brass wheel, it's just a cylinder with 3 holes.
+
 ### Spool
 
 Wire edm as you can guess consume wire, so I need a simple way to manage the waste wire. My solution is to have the new spool of wireconnected to the waste spool with magnet so the second one can be drived by the first one. Since the first spool will get smaller and smaller and the second bigger and bigger, the first one will have to turn way fater to maintain a tension. With this configurtion, the first spool has a way smaller inner diameter which made it spin fzster at any moment. The magnets act like a clutch to maintain constant load at variable speeds.
